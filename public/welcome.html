@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <script>
+    // Variables and functions for idk
+    let noCounter = 0;
+
+    function changeText(counting) {
+      let responses = [
+        "Are you sure?",
+        "Please say yes!",
+        "I thought we had fun :(",
+        "Are you sure sure?",
+        "Okay, fine...",
+      ];
+      document.querySelector(".No").innerText = responses[counting - 1];
+      if (counting === 6) {
+        window.location.href = "page2.html";
+      }
+    }
+
+    document.addEventListener("mousemove", (e) => {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.textContent = "❤";
+    heart.style.left = e.clientX + "px";
+    heart.style.top = e.clientY + "px";
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 1000);
+  });
+
+  </script>
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>heyyyyy bro</title>
+    <link rel="stylesheet" href="/Boyfriend/src.css" />
+  </head>
+
+  <body>
+    <img
+      class="border"
+      src="https://i.pinimg.com/736x/70/58/2a/70582ac44d9c0f3063ab1205e18ac886.jpg"
+    />
+    <img
+      class="heartBear"
+      src="/Boyfriend/images/heart.gif"
+      alt="https://i.pinimg.com/originals/2a/34/c9/2a34c95330d483685437ae5698b12fd9.gif"
+      alt="Teddy bear seated on a red heart-shaped cushion against a plain background, playful and romantic tone"
+    />
+
+    <header>Will you be my boyfriend?</header>
+
+    <div class="button-column">
+      <div class="row">
+        <img
+          class="arow"
+          src="/Boyfriend/images/arow.gif"
+          alt="https://media4.giphy.com/media/fxa5POpcM0V0k7PrFz/source.gif"
+          alt="Cartoon-style arrow pointing to the right, symbolizing Cupid's arrow, playful and romantic tone"
+        />
+        <button class="Yes" onclick="window.location.href='yippee.html'">
+          Yes! :D
+        </button>
+        <img
+          class="arow-right"
+          src="/Boyfriend/images/arrow.gif"
+          alt="https://media4.giphy.com/media/fxa5POpcM0V0k7PrFz/source.gif"
+        />
+      </div>
+      <button
+        class="No"
+        onclick="
+          noCounter++;
+          changeText(noCounter);
+          "
+      >
+        No :(
+      </button>
+    </div>
+    <img
+      class="border-bottom"
+      src="https://i.pinimg.com/736x/70/58/2a/70582ac44d9c0f3063ab1205e18ac886.jpg"
+    />
+    <footer class="signature">Made with ♥︎ by RG</footer>
+  </body>
+</html>
